@@ -1,8 +1,8 @@
-.PHONY: clean generate regenerate test docs redocs hardhat bindings
+.PHONY: build clean rebuild
 
 build: bin/chainprof
 
-rebuild: clean generate build
+rebuild: clean build
 
 bin/chainprof:
 	mkdir -p bin
