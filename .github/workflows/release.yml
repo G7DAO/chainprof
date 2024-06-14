@@ -35,22 +35,21 @@ jobs:
             - uses: actions/setup-go@v2
               with:
                   go-version: ^1.20.0
-
+            - run: ls
             - name: Build binary for each valid (GOOS, GOARCH) pair
               env:
                   GOOS: ${{ matrix.os }}
                   GOARCH: ${{ matrix.arch }}
               run: |
-                  ls ./
-                  #BUILD_DIR="${{ github.ref_name }}-${GOOS}-${GOARCH}"
-                  #EXTENSION=""
-                  #if [ "$GOOS" = "windows" ]; then
-                  #  EXTENSION=".exe"
-                  #fi
-                  #mkdir "$BUILD_DIR"
-                  #cp README.md "$BUILD_DIR/README.md"
-                  #go build -o "$BUILD_DIR/chainprof${EXTENSION}" ./cmd/chainprof
-                  #zip -r "$BUILD_DIR.zip" "$BUILD_DIR"
+                  BUILD_DIR="${{ github.ref_name }}-${GOOS}-${GOARCH}"
+                  EXTENSION=""
+                  if [ "$GOOS" = "windows" ]; then
+                    EXTENSION=".exe"
+                  fi
+                  mkdir "$BUILD_DIR"
+                  cp README.md "$BUILD_DIR/README.md"
+                  go build -o "$BUILD_DIR/chainprof${EXTENSION}" ./cmd/chainprof
+                  zip -r "$BUILD_DIR.zip" "$BUILD_DIR"
             - name: Upload release asset for each valid (GOOS, GOARH) pair
               uses: actions/upload-release-asset@v1
               env:
