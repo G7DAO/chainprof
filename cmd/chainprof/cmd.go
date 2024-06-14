@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/G7DAO/protocol/chainprof"
-	"github.com/G7DAO/protocol/cmd/chainprof/version"
+	"github.com/G7DAO/chainprof/chainprof"
+	"github.com/G7DAO/chainprof/cmd/chainprof/version"
 )
 
 func CreateRootCommand() *cobra.Command {

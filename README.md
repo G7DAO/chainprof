@@ -24,14 +24,14 @@ This checklist describes how to setup chain profiling
 
 ## Environment variables
 
-- [x] `export RPC=<rpc endpoint>`
-- [x] `export NUM_ACCOUNTS=<number of accounts to create>`
-- [x] `export ACCOUNTS_DIR=<directory containing generated accounts>`
-- [x] `export ACCOUNTS_PASSWORD=<password to unlock accounts>`
+- [ ] `export RPC=<rpc endpoint>`
+- [ ] `export NUM_ACCOUNTS=<number of accounts to create>`
+- [ ] `export ACCOUNTS_DIR=<directory containing generated accounts>`
+- [ ] `export ACCOUNTS_PASSWORD=<password to unlock accounts>`
 
 ## Create Accounts to be used for chain profiling
 
-- [x] Create accounts for chain profiling
+- [ ] Create accounts for chain profiling
 
 ```bash
 bin/chainprof chainprof accounts \
@@ -45,12 +45,12 @@ bin/chainprof chainprof accounts \
 
 ### Environment variables
 
-- [x] `export KEY=<path to keyfile of account to fund>`
-- [x] `export VALUE=<value to send to accounts>`
+- [ ] `export KEY=<path to keyfile of account to fund>`
+- [ ] `export VALUE=<value to send to accounts>`
 
 ### Fund Accounts
 
-- [x] Send Transaction to fund accounts with Native Token
+- [ ] Send Transaction to fund accounts with Native Token
 
 ```bash
 bin/chainprof account fund \
@@ -66,11 +66,11 @@ Output: Transaction Hashes
 
 ### Environment variables
 
-- [x] `export RECIPIENT=<address to send funds to>`
+- [ ] `export RECIPIENT=<address to send funds to>`
 
 ### Drain Accounts
 
-- [x] Send Transaction to Transfer all Native Token balance from created accounts to recipient
+- [ ] Send Transaction to Transfer all Native Token balance from created accounts to recipient
 
 ```bash
 bin/chainprof account drain \
@@ -86,15 +86,15 @@ Output: Transaction Hashes
 
 ### Environment variables
 
-- [x] `export NUM_TRANSACTIONS=<number of transactions to send>`
-- [x] `export CALLDATA=<calldata to send in transactions>`
-- [x] `export OUTFILE=<output file to write results to>`
-- [x] `export TO=<address to send transactions to>`
-- [x] `export KEY=<path to keyfile of account to send transactions from>`
+- [ ] `export NUM_TRANSACTIONS=<number of transactions to send>`
+- [ ] `export CALLDATA=<calldata to send in transactions>`
+- [ ] `export OUTFILE=<output file to write results to>`
+- [ ] `export TO=<address to send transactions to>`
+- [ ] `export KEY=<path to keyfile of account to send transactions from>`
 
 ### Evaluate
 
-- [x] Send Transactions to evaluate chain performance
+- [ ] Send Transactions to evaluate chain performance
 
 ```bash
 bin/chainprof chainprof evaluate \

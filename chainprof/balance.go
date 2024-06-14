@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/G7DAO/protocol/bindings/ERC20"
+	"github.com/G7DAO/chainprof/bindings/ERC20"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/accounts/keystore"

@@ -1,4 +1,4 @@
-module github.com/G7DAO/protocol
+module github.com/G7DAO/chainprof
 
 go 1.21.5
 
