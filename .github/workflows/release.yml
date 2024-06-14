@@ -3,7 +3,7 @@ name: Prepare release
 on:
     push:
         tags:
-            - "chainprof-v*"
+            - "v*"
 
 jobs:
     create_release:
@@ -48,16 +48,9 @@ jobs:
                   go-version: ^1.20.0
 
             - name: Install dependencies
-              working-directory: ./web3
               run: npm install
-            - name: Run Hardhat compile
-              working-directory: ./web3
-              run: npx hardhat compile
             - name: Install seer
               run: go install github.com/moonstream-to/seer@latest
-
-            - name: Build interface with seer
-              run: seer evm generate --package Game7Token --output bindings/Game7Token/Game7Token.go --hardhat web3/artifacts/contracts/Token/Game7Token.sol/Game7Token.json --cli --struct Game7Token
 
             - name: Build binary for each valid (GOOS, GOARCH) pair
               env:
