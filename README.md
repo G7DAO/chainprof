@@ -3,6 +3,20 @@
 </p>
 <h1 align="center">Chainprof Rollup Profiler</h1>
 
+# What
+
+You can use **Chainprof Rollup Profiler** to evaluate which rollup suits your project better. It's a stress test for the most commonly used functions: funds transfer. 
+
+It will check how much calls an RPC can handle at once without failing.
+
+# Why
+
+This is a public goods open source tool to help builders evaluate chain performance and assess the resilience of rollup providers' infrastructure.
+
+It is made public to help advance the web3 ecosystem.
+
+# How
+
 ## Requirements
 
 1. NodeJs >= 18 (use nvm)
