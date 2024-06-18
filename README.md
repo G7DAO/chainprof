@@ -7,7 +7,7 @@
 
 You can use **Chainprof Rollup Profiler** to evaluate which rollup suits your project better. It's a stress test for the most commonly used functions: funds transfer. 
 
-It will check how much calls an RPC can handle at once without failing.
+It will check how many calls an RPC can handle at once without failing.
 
 # Why
 
@@ -19,17 +19,10 @@ It is made public to help advance the web3 ecosystem.
 
 ## Requirements
 
-1. NodeJs >= 18 (use nvm)
-2. Fill the .env file with the correct values(see .env.example)
-3. Install dependencies
-4. Build the project
+1. Build the project
 
 ```shell
-npm install
-```
-
-```shell
-make clean && make
+make build
 ```
 
 # Setup chain profiling
